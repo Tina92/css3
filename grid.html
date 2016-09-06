@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+<style>
+    .box{
+        height: 400px;
+        width: 400px;
+        background: #58a;
+        background-image: repeating-linear-gradient(white 2px,transparent  ),
+                          repeating-linear-gradient(90deg,white 2px,transparent  ),
+                          repeating-linear-gradient(hsla(0,0%,100%,.3) 1px,transparent  ),
+                          repeating-linear-gradient(90deg,hsla(0,0%,100%,.3) 1px,transparent );
+        background-size: 75px 75px,75px 75px,15px 15px,15px 15px;
+    }
+</style>
+</html>
