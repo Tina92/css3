@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <div class="picture">
+            <img src="img/4.jpg" alt=" " />
+        </div>
+</body>
+<style>
+    /*.picture {*/
+        /*width: 400px;*/
+        /*transform: rotate(45deg);*/
+        /*overflow: hidden;*/
+    /*}*/
+    /*.picture  img {*/
+        /*max-width: 100%;*/
+        /*transform: rotate(-45deg) scale(1.42);*/
+    /*}*/
+    img {
+        -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+        clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+        transition: 1s clip-path;
+        -webkit-transition: 1s -webkit-clip-path;
+    }
+    img:hover {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+</style>
+</html>
