@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pie</title>
+</head>
+<body>
+    <div class="box"></div>
+    <svg width="100" height="100">
+        <circle r="25" cx="50" cy="50" />
+    </svg>
+    <div class="box1"></div>
+</body>
+<style>
+    .box{
+        width: 100px; height: 100px;
+        border-radius: 50%;
+        background: yellowgreen;
+        background-image: linear-gradient(to right, transparent 50%, #665 0);
+        /*overflow: hidden;*/
+    }
+    .box::before{
+        content: '';
+        display: block;
+        margin-left: 50%;
+        height: 100%;
+        border-radius: 0 100% 100% 0 / 50%;;
+        background-color: inherit;
+        /*transform: rotate(.1turn);*/
+        transform-origin: left;
+        animation: spin 3s linear infinite,bg 6s step-end infinite;
+    }
+    @keyframes spin {
+        to { transform: rotate(.5turn); }
+    }
+
+    @keyframes bg {
+        50% { background: #665; }
+    }
+
+    circle{
+        fill: yellowgreen;
+        stroke: #655;
+        stroke-width: 50;
+        /*stroke-dasharray: 20 10;*/
+        stroke-dasharray: 0 158; /* 2π × 25 ≈ 158 */
+        animation: fillup 5s linear infinite;
+    }
+    svg{
+        transform: rotate(-90deg);
+        background: yellowgreen;
+        border-radius: 50%;
+    }
+    @keyframes fillup {
+        to { stroke-dasharray: 158 158; }
+    }
+
+    .box1{
+        width: 100px; height: 100px;
+        border-radius: 50%;
+        background: conic-gradient(deeppink 20%, #fb3 0, #fb3 30%, yellowgreen 0)
+    }
+</style>
+</html>
