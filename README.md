@@ -32,7 +32,7 @@ After read the css secret
        <a href='https://tina92.github.io/css3/pie.html' target='_blank'>10.Pie</a>
   </li>
   <li>
-         <a href='https://tina92.github.io/css3/text.html' target='_blank'>10.Text</a>
+         <a href='https://tina92.github.io/css3/text.html' target='_blank'>11.Text</a>
     </li>
 
 </ul>
